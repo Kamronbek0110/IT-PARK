@@ -122,7 +122,7 @@ button.btn:hover {
 	width: 100%;
 }
 .header .header_content p.menu_btn {
-  display: none;
+	display: none;
 	cursor: pointer;
 }
 .header .header_content .tools p.btn,
@@ -1191,12 +1191,44 @@ button.btn:hover {
 	button.btn {
 		padding: 10px 14px 10px 18px;
 	}
-	.header .header_content ul {
-		display: none;
+	.header {
+		color: #000;
 	}
+	.header  p.menu_btn {
+		color: #fff;
+	}
+	.header.scrolled  p.menu_btn {
+		color: #000;
+	}
+	.header .header_content ul {
+		/* display: none; */
+		width: 100%;
+		position: absolute;
+		top: -500px;
+		z-index: 10;
+		left: 0;
+		background: #fff;
+		align-items: start;
+		flex-direction: column;
+		gap: 0;
+		border-top: 1px solid #ddd;
+		box-shadow: 0 0 5px #ddd;
+		transition: all 0.3s ease;
+	}
+	.header .header_content ul.active {
+		top: 68px;
+	}
+	.header .header_content ul li {
+		width: 100%;
+		border-bottom: 1px solid #ddd;
+	}
+	.header .header_content ul li:hover {
+		border-bottom: 1px solid #fff;
+	}
+
 	.header .header_content p.menu_btn {
 		display: block;
-    cursor: pointer;
+		cursor: pointer;
 	}
 }
 @media screen and (max-width: 790px) {

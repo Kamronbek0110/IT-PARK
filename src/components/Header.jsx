@@ -2,7 +2,7 @@ import {ArrowUpRight, Menu} from "lucide-react";
 import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 export default function Header({openModal}) {
-	let [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
 	useEffect(() => {
 		const handleScroll = () => {
@@ -12,7 +12,6 @@ export default function Header({openModal}) {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
-
 
 	return (
 		<header className={`header ${scrolled ? "scrolled" : ""}`}>
@@ -31,7 +30,7 @@ export default function Header({openModal}) {
 						</div>
 					</div>
 					<nav>
-						<ul className="menyu">
+						<ul className={`menu ${isMenuOpen ? "active" : ""}`}>
 							<li>
 								<a href="#hero">Asosiy</a>
 							</li>
@@ -49,8 +48,8 @@ export default function Header({openModal}) {
 							</li>
 						</ul>
 						<p
-							className={isMenuOpen ? "active" : ""}
-							onClick={() => setIsMenuOpen(false)}
+							className="menu_btn"
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
 							id="menu_btn"
 						>
 							<Menu />
