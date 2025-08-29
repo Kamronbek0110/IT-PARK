@@ -1510,6 +1510,9 @@ button.btn:hover {
 	.footer .footer_content .items .item {
 		width: 100%;
 	}
+	.footer .footer_desc {
+		font-size: 12px;
+	}
 }
 @media screen and (max-width: 400px) {
 	.about .about_content .text p.title_name {
@@ -1598,4 +1601,11 @@ button.btn:hover {
 	.footer .footer_content .item:first-child .logo a img {
 		width: 130px;
 	}
+	.footer .footer_content .item:first-child p.text {
+		font-size: 14px;
+	}
+	.footer .footer_content .items .item .title {
+		font-size: 24px;
+	}
+	
 }
