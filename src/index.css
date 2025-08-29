@@ -165,7 +165,6 @@ button.btn:hover {
 /* Hero */
 .hero {
 	background: url("./hero/h.webp") no-repeat center center/cover;
-	position: relative;
 	height: 100vh;
 }
 .hero .overlay {
@@ -182,6 +181,8 @@ button.btn:hover {
 	display: flex;
 	align-items: center;
 	color: #fff;
+	position: relative;
+
 }
 .hero .hero_content h1 {
 	font-size: 54px;
