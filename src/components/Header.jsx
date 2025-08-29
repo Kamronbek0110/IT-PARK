@@ -1,9 +1,11 @@
-import {ArrowUpRight, Menu} from "lucide-react";
+import {ArrowUpRight, ChartNoAxesColumn, X} from "lucide-react";
 import {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 export default function Header({openModal}) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [scrolled, setScrolled] = useState(false);
+	const [closeMenu, setCloseMenu] = useState(false);
+
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 10);
@@ -48,12 +50,15 @@ export default function Header({openModal}) {
 							</li>
 						</ul>
 						<p
-							className="menu_btn"
-							onClick={() => setIsMenuOpen(!isMenuOpen)}
+							className={`menu_btn ${closeMenu ? "active" : ""}`}
+							onClick={() => {
+								setIsMenuOpen(!isMenuOpen);
+								setCloseMenu(!closeMenu);
+							}}
 							id="menu_btn"
 						>
-							<Menu />
-							{/* salom */}
+							<ChartNoAxesColumn />
+							<X />
 						</p>
 					</nav>
 					<div className="tools">

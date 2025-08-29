@@ -124,6 +124,23 @@ button.btn:hover {
 .header .header_content p.menu_btn {
 	display: none;
 	cursor: pointer;
+	transform: rotate(270deg);
+}
+.header .header_content p.menu_btn svg {
+	width: 28px;
+	height: 28px;
+}
+.header .header_content p.menu_btn svg:first-child{
+	display: block;
+}
+.header .header_content p.menu_btn.active svg:first-child{
+	display: none;
+}
+.header .header_content p.menu_btn svg:last-child{
+	display: none;
+}
+.header .header_content p.menu_btn.active svg:last-child{
+	display: block;
 }
 .header .header_content .tools p.btn,
 .hero .hero_content a.btn {
@@ -187,6 +204,7 @@ button.btn:hover {
 /* About */
 .about {
 	padding: 100px 0;
+	background: #fff;
 }
 .about .about_content {
 	display: flex;
@@ -704,15 +722,12 @@ button.btn:hover {
 }
 .contact .contact_content {
 	display: flex;
-	/* align-items: center; */
-	/* flex-wrap: wrap; */
 	justify-content: space-around;
 	gap: 50px;
 }
 
 .contact .contact_content .map {
 	width: 500px;
-	/* height: 558px; */
 }
 .contact .contact_content .map iframe {
 	width: 100%;
@@ -1056,7 +1071,8 @@ button.btn:hover {
 	text-align: center;
 }
 .notf_content .img {
-	width: 600px;
+	max-width: 600px;
+	min-width: 600px;
 	margin: 0 auto;
 }
 .notf_content .text {
@@ -1065,6 +1081,7 @@ button.btn:hover {
 	align-items: center;
 	gap: 12px;
 	width: calc(100% - 630px);
+	min-width: 470px;
 }
 .notf_content .title p {
 	font-size: 42px;
@@ -1126,6 +1143,19 @@ button.btn:hover {
 	}
 	.footer .footer_content .items {
 		width: 50%;
+	}
+	.notf_content {
+		justify-content: center;
+		/* height: 80vh; */
+		height: auto;
+		gap: 50px;
+		padding: 100px 0;
+	}
+	.notf .header .menu_btn {
+		color: #000 !important;
+	}
+	.notf_content .text {
+		width: 70%;
 	}
 }
 @media screen and (max-width: 980px) {
@@ -1194,10 +1224,10 @@ button.btn:hover {
 	.header {
 		color: #000;
 	}
-	.header  p.menu_btn {
+	.header p.menu_btn {
 		color: #fff;
 	}
-	.header.scrolled  p.menu_btn {
+	.header.scrolled p.menu_btn {
 		color: #000;
 	}
 	.header .header_content ul {
@@ -1386,10 +1416,17 @@ button.btn:hover {
 		width: 40px;
 		height: 40px;
 	}
+	.notf_content .img {
+		width: 100%;
+		min-width: 0;
+	}
 }
 @media screen and (max-width: 584px) {
 	.header .header_content .logos .logo img {
 		width: 130px;
+	}
+	.header .header_content ul.active {
+		top: 61.88px;
 	}
 	.about .about_content .text a {
 		padding: 10px 12px 10px 16px;
@@ -1607,5 +1644,19 @@ button.btn:hover {
 	.footer .footer_content .items .item .title {
 		font-size: 24px;
 	}
-	
+}
+@media screen and (max-width: 900px) {
+	.notf_content .text {
+		width: 100%;
+		min-width: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	.notf_content .title p {
+		font-size: 28px;
+	}
+	.notf_content .text a.btn {
+		font-size: 14px;
+		padding: 10px 14px;
+	}
 }
