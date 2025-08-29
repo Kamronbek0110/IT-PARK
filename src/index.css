@@ -130,16 +130,16 @@ button.btn:hover {
 	width: 28px;
 	height: 28px;
 }
-.header .header_content p.menu_btn svg:first-child{
+.header .header_content p.menu_btn svg:first-child {
 	display: block;
 }
-.header .header_content p.menu_btn.active svg:first-child{
+.header .header_content p.menu_btn.active svg:first-child {
 	display: none;
 }
-.header .header_content p.menu_btn svg:last-child{
+.header .header_content p.menu_btn svg:last-child {
 	display: none;
 }
-.header .header_content p.menu_btn.active svg:last-child{
+.header .header_content p.menu_btn.active svg:last-child {
 	display: block;
 }
 .header .header_content .tools p.btn,
@@ -932,7 +932,7 @@ button.btn:hover {
 	z-index: 999;
 	background: #56bb00;
 	bottom: 90px;
-	right: 18px;
+	right: 25px;
 	color: #fff;
 	transition: all 0.2s ease;
 }
@@ -1161,6 +1161,12 @@ button.btn:hover {
 @media screen and (max-width: 980px) {
 	.header .header_content .tools {
 		display: none;
+	}
+}
+@media screen and (max-width: 900px) {
+	.notf_content .text {
+		width: 100%;
+		min-width: 0;
 	}
 }
 @media screen and (max-width: 875px) {
@@ -1411,8 +1417,6 @@ button.btn:hover {
 		gap: 15px;
 	}
 	.totop {
-		right: 10px;
-		bottom: 20px;
 		width: 40px;
 		height: 40px;
 	}
@@ -1444,6 +1448,15 @@ button.btn:hover {
 	}
 	.contact .contact_content .text form button#btn {
 		width: 150px;
+	}
+}
+@media screen and (max-width: 500px) {
+	.notf_content .title p {
+		font-size: 28px;
+	}
+	.notf_content .text a.btn {
+		font-size: 14px;
+		padding: 10px 14px;
 	}
 }
 @media screen and (max-width: 465px) {
@@ -1643,20 +1656,5 @@ button.btn:hover {
 	}
 	.footer .footer_content .items .item .title {
 		font-size: 24px;
-	}
-}
-@media screen and (max-width: 900px) {
-	.notf_content .text {
-		width: 100%;
-		min-width: 0;
-	}
-}
-@media screen and (max-width: 500px) {
-	.notf_content .title p {
-		font-size: 28px;
-	}
-	.notf_content .text a.btn {
-		font-size: 14px;
-		padding: 10px 14px;
 	}
 }
