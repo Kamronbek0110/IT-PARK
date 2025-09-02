@@ -165,8 +165,8 @@ button.btn:hover {
 /* Hero */
 .hero {
 	background: url("../public/hero/h.jpg") no-repeat center center/cover;
-	/* background-image: url(https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80); */
 	height: 100vh;
+	position: relative;
 }
 .hero .overlay {
 	position: absolute;
@@ -182,8 +182,6 @@ button.btn:hover {
 	display: flex;
 	align-items: center;
 	color: #fff;
-	position: relative;
-
 }
 .hero .hero_content h1 {
 	font-size: 54px;
@@ -1243,7 +1241,7 @@ button.btn:hover {
 		width: 100%;
 		position: absolute;
 		top: -500px;
-		z-index: 10;
+		z-index: -1;
 		left: 0;
 		background: #fff;
 		align-items: start;

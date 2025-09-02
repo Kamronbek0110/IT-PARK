@@ -9,7 +9,6 @@ import {
 	Phone,
 	UsersRound,
 	X,
-	
 	Youtube,
 } from "lucide-react";
 import {useEffect, useRef, useState} from "react";
