@@ -2,7 +2,7 @@ import {PhoneCall, Star, UserRound} from "lucide-react";
 import {useState} from "react";
 import "animate.css";
 
-export default function Courses_item({name,img}) {
+export default function Courses_item({name,img, desc}) {
 	const [isHovered, setIsHovered] = useState(false);
 	return (
 		<div className="item">
@@ -14,19 +14,18 @@ export default function Courses_item({name,img}) {
 					<p className="name">{name}</p>
 					<div className="icon">
 						<Star />
-						<p>3.5</p>
+						<p>5.0</p>
 					</div>
 				</div>
 				<div className="text">
 					<p className="desc">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-						iure?
+						{desc}
 					</p>
 				</div>
 				<div className="foot">
 					<div className="students">
 						<UserRound />
-						<p>435,000</p>
+						<p>1,000</p>
 						<span>o'quvchilar</span>
 					</div>
 					<div className="phone">

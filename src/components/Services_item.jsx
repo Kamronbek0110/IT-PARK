@@ -1,4 +1,4 @@
-export default function Services_item({ img, name, openModal }) {
+export default function Services_item({ img, name, openModal, desc, tags }) {
   return (
     <div className="item">
       <div className="overlay"></div>
@@ -8,17 +8,13 @@ export default function Services_item({ img, name, openModal }) {
       <p className="title">{name}</p>
       <div className="text">
         <p className="name">{name}</p>
-        <p className="desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus
-          repudiandae cum similique odio consequuntur.
-        </p>
-        <div className="types">
-          <p className="type">Lorem2</p>
-          <p className="type">Lorem2</p>
-          <p className="type">Lorem2</p>
-          <p className="type">Lorem2</p>
-          <p className="type">Lorem2</p>
-          <p className="type">Lorem2</p>
+        <p className="desc">{desc}</p>
+        <div className="types" id="types">
+          {tags.map((item, index) => {
+            <p key={index} className="type">
+              {item}
+            </p>;
+          })}
         </div>
         <div className="btns">
           <a href="#courses" className="btn otherBtn">
