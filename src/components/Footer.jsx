@@ -13,9 +13,7 @@ export default function Footer() {
 							</NavLink>
 						</div>
 						<p className="text">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Accusamus aperiam nihil eius illo nisi quidem earum soluta, quo
-							ipsa officiis!
+							IT PARK — zamonaviy IT bilimlarni o‘rgatish va innovatsion loyihalarni rivojlantirish markazi. Biz bilan kelajagingizga investitsiya qiling!
 						</p>
 						<div className="socials">
 							<a href="#" className="btn">
