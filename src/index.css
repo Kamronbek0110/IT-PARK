@@ -791,7 +791,8 @@ button.btn:hover {
   border-radius: 12px;
   order: 1;
 }
-.contact .contact_content .text form .success_message {
+.contact .contact_content .text form .success_message,
+.modal1 .modal form .success_message {
   margin: 0px 0;
   color: green;
   font-weight: 600;
@@ -1020,6 +1021,11 @@ button.btn:hover {
 }
 .modal1 .modal form input:focus {
   outline: 1px solid #56bb00;
+}
+.modal1 .modal form .success_message {
+  text-align: center;
+  order: 0;
+  margin: 5px 0 0px;
 }
 .modal1 .modal form button.btn {
   width: 100%;

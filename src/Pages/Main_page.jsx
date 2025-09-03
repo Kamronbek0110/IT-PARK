@@ -37,10 +37,12 @@ import Footer from "../components/Footer";
 export default function Main_page() {
   const [success, setSuccess] = useState(false);
   const formRef = useRef(null);
+  const [success1, setSuccess1] = useState(false);
+  const formRef1 = useRef(null);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit1 = async (e) => {
     e.preventDefault();
-    const form = formRef.current;
+    const form = formRef1.current;
     const requiredInputs = form.querySelectorAll(
       "input[required], textarea[required]"
     );
@@ -67,12 +69,45 @@ export default function Main_page() {
         }
       );
       if (res.ok) {
-        setSuccess(true);
+        setSuccess1(true);
         form.reset();
       }
     } catch (err) {}
   };
-
+ const handleSubmit = async (e) => {
+   e.preventDefault();
+   const form = formRef.current;
+   const requiredInputs = form.querySelectorAll(
+     "input[required], textarea[required]"
+   );
+   for (let input of requiredInputs) {
+     if (!input.value.trim()) {
+       input.focus();
+       input.scrollIntoView({
+         behavior: "smooth",
+         block: "center",
+       });
+       return;
+     }
+   }
+   const formData = new FormData(form);
+   try {
+     const res = await fetch(
+       "https://formsubmit.co/ajax/zayniddinovkamronbek668@gmail.com",
+       {
+         method: "POST",
+         body: formData,
+         headers: {
+           Accept: "application/json",
+         },
+       }
+     );
+     if (res.ok) {
+       setSuccess(true);
+       form.reset();
+     }
+   } catch (err) {}
+ };
   let [isModalOpen, setIsModalOpen] = useState(false);
   const el = useRef(null);
   const typed = useRef(null);
@@ -113,7 +148,7 @@ export default function Main_page() {
       {/* Modal */}
       <div className="modal1">
         <div
-          className={`overlay ${isModalOpen ? "active" : ""}` }
+          className={`overlay ${isModalOpen ? "active" : "" }` }
           onClick={() => setIsModalOpen(false)}
         ></div>
         <div className={`modal ${isModalOpen ? "active" : ""}`}>
@@ -129,19 +164,16 @@ export default function Main_page() {
               <X />
             </div>
           </div>
-          <form ref={formRef} onSubmit={handleSubmit}>
+          <form ref={formRef1} onSubmit={handleSubmit1}>
             <input type="text" placeholder="Ismingiz" name="Name" required/>
             <input type="number" placeholder="Telefon raqamingiz" name="Phone Number" required/>
             <input type="email" placeholder="Elektron pochtangiz" name="Email" required/>
-            {/* {success && (
+            {success1 && (
               <div className="success_message">
                 Xabaringiz muvaffaqiyatli yuborildi!
               </div>
-            )} */}
-            <button
-              className="btn">
-              Jo'natish
-            </button>
+            )}
+            <button className="btn">Jo'natish</button>
           </form>
         </div>
       </div>
@@ -453,8 +485,8 @@ export default function Main_page() {
                 <Mail />
               </div>
               <div className="inform">
-                <p>Emailingiz</p>
-                <span>sadddssds@gmail.com</span>
+                <p>Email</p>
+                <span>info@itpark@gmail.com</span>
               </div>
             </div>
             <div className="item">
@@ -462,7 +494,7 @@ export default function Main_page() {
                 <Phone />
               </div>
               <div className="inform">
-                <p>Emailingiz</p>
+                <p>Telefon</p>
                 <span>sadddssds@gmail.com</span>
               </div>
             </div>
@@ -471,14 +503,13 @@ export default function Main_page() {
                 <Instagram />
               </div>
               <div className="inform">
-                <p>Emailingiz</p>
-                <span>sadddssds@gmail.com</span>
+                <p>Instagram</p>
+                <span>info@itpark.com</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Footer */}
       <Footer />
       {/* Totop */}
