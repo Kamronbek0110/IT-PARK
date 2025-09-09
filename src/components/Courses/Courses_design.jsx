@@ -10,7 +10,7 @@ export default function Courses_design() {
       />
       <Courses_item
         name="3D max"
-        img="./courses/Design/3.jpg"
+        img="./courses/Design/2.jpg"
         desc="3D modellashtirish va animatsiya yaratishni 3ds Max dasturida o‘zlashtirasiz."
       />
     </>
