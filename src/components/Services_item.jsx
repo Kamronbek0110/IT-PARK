@@ -10,11 +10,11 @@ export default function Services_item({ img, name, openModal, desc, tags }) {
         <p className="name">{name}</p>
         <p className="desc">{desc}</p>
         <div className="types" id="types">
-          {tags.map((item, index) => {
+          {/* {tags.map((item, index) => {
             <p key={index} className="type">
               {item}
             </p>;
-          })}
+          })} */}
         </div>
         <div className="btns">
           <a href="#courses" className="btn otherBtn">

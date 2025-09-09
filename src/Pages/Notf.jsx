@@ -13,7 +13,7 @@ export default function Notf() {
           <div className="title">
             <p>Page Not Found</p>
           </div>
-          <p className="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae quia et minima neque harum aliquam.</p>
+          <p className="desc">Kechirasiz, siz so‘ragan sahifa topilmadi. Ehtimol, sahifa o‘chirilgan yoki manzil noto‘g‘ri kiritilgan.</p>
           <NavLink to='/' className="btn">Asosiy sahifaga qaytish</NavLink>
         </div>
         </div>

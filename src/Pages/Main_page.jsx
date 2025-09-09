@@ -495,7 +495,7 @@ export default function Main_page() {
               </div>
               <div className="inform">
                 <p>Telefon</p>
-                <span>sadddssds@gmail.com</span>
+                <span>+998 93 123 45 67</span>
               </div>
             </div>
             <div className="item">

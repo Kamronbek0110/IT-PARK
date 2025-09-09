@@ -9,6 +9,19 @@
 }
 html {
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: 5px;
+  scrollbar-color: #56bb00 #f0f4f8;
+}
+html::-webkit-scrollbar {
+  height: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background: #56bb00;
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-track {
+  background: #f0f4f8;
 }
 img {
   width: 100%;
@@ -57,12 +70,8 @@ button.btn:hover {
 .header.scrolled {
   background: #fff;
   color: #000;
-  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.4s ease forwards;
 }
@@ -76,16 +85,12 @@ button.btn:hover {
     opacity: 1;
   }
 }
-.header .header_content .logos .logo:first-child {
-  display: none;
-}
+.header.scrolled .header_content .logos .logo:first-child,
 .header .header_content .logos .logo:last-child {
   display: block;
 }
-.header.scrolled .header_content .logos .logo:first-child {
-  display: block;
-}
-.header.scrolled .header_content .logos .logo:last-child {
+.header.scrolled .header_content .logos .logo:last-child,
+.header .header_content .logos .logo:first-child {
   display: none;
 }
 .header .header_content {
@@ -130,17 +135,13 @@ button.btn:hover {
   width: 28px;
   height: 28px;
 }
-.header .header_content p.menu_btn svg:first-child {
-  display: block;
-}
-.header .header_content p.menu_btn.active svg:first-child {
-  display: none;
-}
-.header .header_content p.menu_btn svg:last-child {
-  display: none;
-}
+.header .header_content p.menu_btn svg:first-child,
 .header .header_content p.menu_btn.active svg:last-child {
   display: block;
+}
+.header .header_content p.menu_btn.active svg:first-child,
+.header .header_content p.menu_btn svg:last-child {
+  display: none;
 }
 .header .header_content .tools p.btn,
 .hero .hero_content a.btn {
@@ -174,6 +175,7 @@ button.btn:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.7);
 }
 .hero .hero_content {
@@ -192,6 +194,8 @@ button.btn:hover {
 .hero .hero_content h1 span.green {
   text-transform: uppercase;
   color: #56bb00;
+  position: relative;
+  z-index: 3;
 }
 .hero .hero_content .text {
   display: flex;
@@ -240,10 +244,10 @@ button.btn:hover {
   transform: rotate(25deg);
 }
 .about .about_content .img .graph {
+  width: 250px;
   position: absolute;
   top: 160px;
   left: -100px;
-  width: 250px;
   background: linear-gradient(
     -120deg,
     rgba(255, 255, 255, 0.5) 0%,
@@ -284,11 +288,10 @@ button.btn:hover {
 .about .about_content .text {
   width: 50%;
 }
-.about .about_content .text .title p,
-.faq p.name {
+.about .about_content .text .title p {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
   text-transform: uppercase;
   color: #56bb00;
 }
@@ -385,7 +388,6 @@ button.btn:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  flex-wrap: wrap;
   gap: 20px;
   margin: 50px 0 0;
 }
@@ -395,7 +397,6 @@ button.btn:hover {
   flex-direction: column;
   align-items: start;
   gap: 15px;
-  background: #cbd5e1;
   border-radius: 10px;
   padding: 25px 30px;
   box-shadow: 0 0 8px #ddd;
@@ -473,7 +474,6 @@ button.btn:hover {
   width: 100%;
   height: 100%;
 }
-
 .services .services_content .cards .item p.title {
   width: 100%;
   line-height: 54px;
@@ -725,7 +725,6 @@ button.btn:hover {
   justify-content: space-around;
   gap: 50px;
 }
-
 .contact .contact_content .map {
   width: 500px;
 }
@@ -965,6 +964,7 @@ button.btn:hover {
 /* Modal */
 .modal1 .modal {
   max-width: 450px;
+  height: fit-content;
   display: block;
   position: fixed;
   top: -5000px;
@@ -973,7 +973,6 @@ button.btn:hover {
   right: 0;
   z-index: 10001;
   margin: auto;
-  height: fit-content;
   background: #fff;
   padding: 20px 25px;
   border-radius: 15px;
@@ -1058,12 +1057,8 @@ button.btn:hover {
   width: 100%;
   background: #fff;
   color: #000;
-  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(0);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.4s ease forwards;
 }
@@ -1159,7 +1154,6 @@ button.btn:hover {
   }
   .notf_content {
     justify-content: center;
-    /* height: 80vh; */
     height: auto;
     gap: 50px;
     padding: 100px 0;
@@ -1464,6 +1458,10 @@ button.btn:hover {
   }
 }
 @media screen and (max-width: 500px) {
+  .header .header_content ul li a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
   .contact .contact_content .text form button#btn {
     order: 2;
   }
