@@ -14,6 +14,11 @@ export default function Courses_program() {
         desc="Server tomoni dasturlash, ma’lumotlar bazasi bilan ishlash va API yaratishni o‘rganasiz."
       />
       <Courses_item
+        name="Robototexnika"
+        img="./courses/IT/4.png"
+        desc="Arduino va boshqa platformalarda robotlarni yaratish va ularni dasturlashni o‘rganasiz."
+      />
+      <Courses_item
         name="Kompyuter savodxonligi"
         img="./courses/IT/3.jpg"
         desc="Kompyuter asoslari, Microsoft officelari va internetdan foydalanishni o‘rganasiz."
